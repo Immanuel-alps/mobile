@@ -1,11 +1,13 @@
 package com.example.immanuel_3tif.pertemuan_4
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.immanuel_3tif.databinding.ActivityFourthBinding
+import com.google.android.material.snackbar.Snackbar
 
 class FourthActivity : AppCompatActivity() {
 
@@ -23,9 +25,20 @@ class FourthActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        val name = intent.getStringExtra("name")
+        val from = intent.getStringExtra("from")
+        val age = intent.getIntExtra("age",0)
+        Log.e("Data Intent","Nama: $name , Usia: $age, Asal: $from")
 
-        binding.btnBack.setOnClickListener {
+        binding.btnKembali.setOnClickListener {
             finish()
+        }
+        binding.btnShowSnackbar.setOnClickListener {
+            Snackbar.make(binding.root, "Ini adalah Snackbar", Snackbar.LENGTH_SHORT)
+                .setAction("Tutup") {
+                    Log.e("Info Snackbar", "Snackbar ditutup")
+                }
+                .show()
         }
     }
 }
