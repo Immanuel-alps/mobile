@@ -1,13 +1,15 @@
 package com.example.immanuel_3tif
 
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.immanuel_3tif.databinding.ActivityMainBinding
-import com.example.immanuel_3tif.pertemuan_4.FourthActivity
+import com.example.immanuel_3tif.Home.pertemuan_4.FourthActivity
+import com.example.immanuel_3tif.Home.pertemuan_7.SeventhActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -38,6 +40,10 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("from", "Rumbai")
             intent.putExtra("age", 25)
 
+            startActivity(intent)
+        }
+        binding.btnToSeventh.setOnClickListener {
+            val intent = Intent(this, SeventhActivity::class.java)
             startActivity(intent)
         }
     }
