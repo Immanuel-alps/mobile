@@ -8,19 +8,18 @@
     android:layout_height="match_parent"
     tools:context=".Home.pertemuan_4.FourthActivity">
 
-    <!-- BUTTON KEMBALI -->
-    <Button
-        android:id="@+id/btnKembali"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="432dp"
-        android:backgroundTint="#E64A19"
-        android:text="Kembali"
-        android:textColor="@android:color/white"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
+        app:titleTextColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
 
     <!-- CARD -->
     <com.google.android.material.card.MaterialCardView
@@ -30,7 +29,7 @@
         android:layout_marginTop="28dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
         <!-- ISI CARD -->
         <androidx.constraintlayout.widget.ConstraintLayout

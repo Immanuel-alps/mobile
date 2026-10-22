@@ -19,19 +19,24 @@ class SeventhActivity : AppCompatActivity() {
 
         binding = ActivitySeventhBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        setContentView(R.layout.activity_seventh)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+        ViewCompat.setOnApplyWindowInsetsListener(binding.main) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-//        setSupportActionBar(binding.toolbar)
-//        supportActionBar?.apply {
-//            title = "Web LK21"
-//            setDisplayHomeAsUpEnabled(true)
-//            setDisplayShowHomeEnabled(true)
-//        }
+
+        setSupportActionBar(binding.toolbar)
+        supportActionBar?.apply {
+            title = "Activity Seventh"
+            setDisplayHomeAsUpEnabled(true)
+            setDisplayShowHomeEnabled(true)
+            setHomeAsUpIndicator(R.drawable.ic_arrow_back)
+        }
+
+        // Menampilkan fragment pertama secara default
         replaceFragment(SatuFragment())
+
+        // Setup event click untuk mengganti fragment
         binding.btnFragment1.setOnClickListener {
             replaceFragment(SatuFragment())
         }
@@ -42,17 +47,19 @@ class SeventhActivity : AppCompatActivity() {
 
         binding.btnFragment3.setOnClickListener {
             replaceFragment(TigaFragment())
-    }
         }
+    }
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             android.R.id.home -> {
-                onBackPressedDispatcher.onBackPressed()
+                finish()
                 true
             }
             else -> super.onOptionsItemSelected(item)
         }
     }
+
     private fun replaceFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
             .replace(binding.fragmentContainer.id, fragment)
