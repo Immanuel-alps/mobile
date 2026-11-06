@@ -10,6 +10,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.immanuel_3tif.AuthActivity
+import com.example.immanuel_3tif.Home.pertemuan_10.TenthActivity
 import com.example.immanuel_3tif.Home.pertemuan_2.SecoundActivity
 import com.example.immanuel_3tif.Home.pertemuan_3.ThirdActivity
 import com.example.immanuel_3tif.Home.pertemuan_4.FourthActivity
@@ -81,6 +82,9 @@ class HomeFragment : Fragment() {
                 }
                 .setNegativeButton("Tidak") { dialog, _ -> dialog.dismiss() }
                 .show()
+        }
+        binding.btnToTenth.setOnClickListener {
+            startActivity(Intent(requireContext(), TenthActivity::class.java))
         }
     }
 
