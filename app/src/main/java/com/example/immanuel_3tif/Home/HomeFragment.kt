@@ -16,6 +16,7 @@ import com.example.immanuel_3tif.Home.pertemuan_3.ThirdActivity
 import com.example.immanuel_3tif.Home.pertemuan_4.FourthActivity
 import com.example.immanuel_3tif.Home.pertemuan_5.FifthActivity
 import com.example.immanuel_3tif.Home.pertemuan_7.SeventhActivity
+import com.example.immanuel_3tif.Home.pertemuan_11.EleventhActivity
 import com.example.immanuel_3tif.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -86,8 +87,11 @@ class HomeFragment : Fragment() {
         binding.btnToTenth.setOnClickListener {
             startActivity(Intent(requireContext(), TenthActivity::class.java))
         }
-    }
+        binding.btnToEleventh.setOnClickListener {
+            startActivity(Intent(requireContext(), EleventhActivity::class.java))
+        }
 
+    }
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

@@ -39,7 +39,6 @@ class TenthActivity : AppCompatActivity() {
             onBackPressedDispatcher.onBackPressed()
         }
 
-
         // Listener untuk ChipGroup mendeteksi Chip yang dipilih
         binding.chipGroupFilter.setOnCheckedStateChangeListener { group, checkedIds ->
             val selectedChipId = checkedIds.firstOrNull()
