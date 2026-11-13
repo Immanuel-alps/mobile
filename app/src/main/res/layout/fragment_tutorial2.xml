@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#A6CE77"
+    android:padding="24dp">
+
+    <ImageView
+        android:id="@+id/ivLogo2"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="120dp"
+        android:src="@mipmap/ic_launcher"
+        android:contentDescription="Logo Tutorial 2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitle2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:gravity="center"
+        android:text="Tap untuk Melihat Detail!"
+        android:textColor="#1A1A1A"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivLogo2" />
+
+    <TextView
+        android:id="@+id/tvDesc2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:gravity="center"
+        android:text="Ketuk salah satu pesan untuk melihat detailnya. Kamu juga bisa menambahkan aksi lain seperti membalas, menyimpan, atau membagikan pesan tersebut"
+        android:textColor="#262626"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

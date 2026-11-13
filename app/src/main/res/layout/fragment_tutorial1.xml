@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#58A6E8"
+    android:padding="24dp">
+
+    <ImageView
+        android:id="@+id/ivLogo1"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="120dp"
+        android:src="@mipmap/ic_launcher"
+        android:contentDescription="Logo Tutorial 1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitle1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:gravity="center"
+        android:text="Selamat Datang di Fitur Pesan!"
+        android:textColor="#1A1A1A"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivLogo1" />
+
+    <TextView
+        android:id="@+id/tvDesc1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:gravity="center"
+        android:text="Dengan fitur ini, kamu bisa melihat daftar pesan masuk dari pengguna lain. Semua pesan ditampilkan lengkap dengan nama pengirim, avatar, dan isi pesan"
+        android:textColor="#262626"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
